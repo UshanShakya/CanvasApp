@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Draw and Fill App</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Tool Panel -->
+            <div class="col-md-3 tool-panel">
+                <h5 class="modal-title">Choose Image</h5>
+                <input type="file" id="imagePicker" class="form-control mb-3" accept="image/*">
+                <h5 class="modal-title">Choose Color</h5>
+                <input type="color" id="color-picker" value="#000000">
+                <br/>
+                <h5 class="modal-title">Point Size</h5>
+                <input type="range" id="size-slider" min="1" max="5" value="5">
+                <br />
+                <h5 class="modal-title">Transparency</h5>
+                <input type="range" id="transparency-slider" min="1" max="10" value="5">
+                <br />
+                <button id="clearCanvas" class="btn btn-danger mb-3" onclick="clearCanvas()">Clear Canvas</button>
+                <button id="saveCanvas" class="btn btn-success mb-3" onclick="downloadCanvas()">Download</button>
+            </div>
+
+            <!-- Drawing Board -->
+            <div class="col-md-9">
+                <canvas id="myCanvas" width="1000" height="800"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="assets/jquery/jquery-3.7.1.min.js"></script>
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
